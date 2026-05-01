@@ -1,7 +1,6 @@
-"""
-TODO:
-
+"""TODO:
 foo should accept a empty tuple argument.
+
 """
 
 

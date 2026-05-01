@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import pytest
+
 from views.challenge import ChallengeKey, ChallengeManager
 
 
@@ -17,7 +18,7 @@ class TestLoadChallenges:
 
 
 class TestChallengeWithHints:
-    @pytest.fixture()
+    @pytest.fixture
     def challenge_mgr(self, assets_dir):
         return ChallengeManager(assets_dir / "challenges")
 
@@ -27,7 +28,7 @@ class TestChallengeWithHints:
 
         # Get the challenge with hints
         c_foo_hints = challenge_mgr.get_challenge(
-            ChallengeKey.from_str("basic-foo-hints")
+            ChallengeKey.from_str("basic-foo-hints"),
         )
         assert c_foo_hints.hints
         assert isinstance(c_foo_hints.hints, str)

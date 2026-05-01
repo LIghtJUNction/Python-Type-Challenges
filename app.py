@@ -1,8 +1,9 @@
 import threading
-from flask import Flask, redirect, request, send_from_directory
 from typing import cast
 
-from views import views, challenge
+from flask import Flask, redirect, request, send_from_directory
+
+from views import challenge, views
 from views.sitemap import sitemapper
 
 app = Flask(
@@ -22,7 +23,7 @@ def page_not_found(err):
 
 @app.route("/robots.txt")
 def robots_txt():
-    return send_from_directory(cast(str, app.static_folder), request.path[1:])
+    return send_from_directory(cast("str", app.static_folder), request.path[1:])
 
 
 @app.route("/sitemap.xml")

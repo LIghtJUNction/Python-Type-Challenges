@@ -1,9 +1,7 @@
-"""
-TODO:
-
+"""TODO:
 Define a decorator that wraps a function and returns a function with the same signature.
+
 """
-from typing import Callable, TypeVar
 
 
 def decorator(func):
@@ -12,13 +10,11 @@ def decorator(func):
 
 ## End of your code ##
 @decorator
-def foo(a: int, *, b: str) -> None:
-    ...
+def foo(a: int, *, b: str) -> None: ...
 
 
 @decorator
-def bar(c: int, d: str) -> None:
-    ...
+def bar(c: int, d: str) -> None: ...
 
 
 foo(1, b="2")

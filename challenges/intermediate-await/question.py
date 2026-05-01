@@ -1,12 +1,10 @@
-"""
-TODO:
-
+"""TODO:
 `run_async` takes an awaitable integer.
+
 """
 
 
-def run_async():
-    ...
+def run_async(): ...
 
 
 ## End of your code ##

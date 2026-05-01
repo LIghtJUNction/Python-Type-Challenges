@@ -1,7 +1,6 @@
-"""
-TODO:
-
+"""TODO:
 foo can accept an integer argument, None or no argument at all.
+
 """
 
 

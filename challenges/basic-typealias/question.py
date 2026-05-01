@@ -1,13 +1,11 @@
-"""
-TODO:
-
+"""TODO:
 Create a new type called Vector, which is a list of float.
+
 """
 
 
 ## End of your code ##
-def foo(v: Vector):
-    ...
+def foo(v: Vector): ...
 
 
 foo([1.1, 2])

@@ -1,12 +1,10 @@
-"""
-TODO:
-
+"""TODO:
 Define a callable type that accepts a string parameter called `name` and returns None.
+
 """
 
 
-class SingleStringInput:
-    ...
+class SingleStringInput: ...
 
 
 ## End of your code ##
@@ -14,12 +12,10 @@ def accept_single_string_input(func: SingleStringInput) -> None:
     func(name="name")
 
 
-def string_name(name: str) -> None:
-    ...
+def string_name(name: str) -> None: ...
 
 
-def string_value(value: str) -> None:
-    ...
+def string_value(value: str) -> None: ...
 
 
 def return_string(name: str) -> str:

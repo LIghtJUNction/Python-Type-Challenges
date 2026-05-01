@@ -1,9 +1,8 @@
-"""
-TODO:
-
+"""TODO:
 Define a generic class that represents a stack.
 It can be instantiated with a certain type, with method `push` accepting an object of the specified type,
 and `pop` returning an object of the same type
+
 """
 
 

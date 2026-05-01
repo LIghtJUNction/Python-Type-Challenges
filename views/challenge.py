@@ -8,7 +8,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from enum import StrEnum
 from pathlib import Path
-from typing import ClassVar, Optional, TypeAlias
+from typing import ClassVar, TypeAlias
 
 ROOT_DIR = Path(__file__).parent.parent
 
@@ -53,7 +53,7 @@ class Challenge:
     code: str
     user_code: str = field(default="", init=False)
     test_code: str = field(default="", init=False)
-    hints: Optional[str] = None
+    hints: str | None = None
 
     def __post_init__(self):
         self.parse_code()
@@ -75,7 +75,7 @@ class ChallengeManager:
     :param root_dir: The root directory that contains the files of challenges.
     """
 
-    def __init__(self, root_dir: Optional[Path] = None):
+    def __init__(self, root_dir: Path | None = None):
         if not root_dir:
             root_dir = ROOT_DIR / "challenges"
         self.challenges: dict[ChallengeKey, Challenge] = self._load_challenges(root_dir)
@@ -149,7 +149,9 @@ class ChallengeManager:
 
     @classmethod
     def _type_check_with_pyright(
-        cls, user_code: str, test_code: str
+        cls,
+        user_code: str,
+        test_code: str,
     ) -> TypeCheckResult:
         code = f"{user_code}{test_code}"
         buffer = io.StringIO(code)
@@ -168,9 +170,9 @@ class ChallengeManager:
             and token.string[1:].strip() == cls.EXPECT_ERROR_COMMENT
         ]
         # Tracks whether an expected error has been reported by type checker.
-        error_line_seen_in_err_msg: dict[int, bool] = {
-            lineno: False for lineno in expect_error_line_numbers
-        }
+        error_line_seen_in_err_msg: dict[int, bool] = dict.fromkeys(
+            expect_error_line_numbers, False
+        )
 
         with tempfile.NamedTemporaryFile(suffix=".py") as temp:
             temp.write(code.encode())
@@ -202,7 +204,7 @@ class ChallengeManager:
                 continue
             # Error could be thrown from user code too, in which case delta shouldn't be applied.
             error_lines.append(
-                f"{line_number if line_number <= lineno_delta else line_number - lineno_delta}:{message}"
+                f"{line_number if line_number <= lineno_delta else line_number - lineno_delta}:{message}",
             )
 
         # If there are any lines that are expected to fail but not reported by pyright,
@@ -210,7 +212,7 @@ class ChallengeManager:
         for line_number, seen in error_line_seen_in_err_msg.items():
             if not seen:
                 error_lines.append(
-                    f"{line_number - lineno_delta}: error: Expected type error but instead passed"
+                    f"{line_number - lineno_delta}: error: Expected type error but instead passed",
                 )
 
         passed = len(error_lines) == 0

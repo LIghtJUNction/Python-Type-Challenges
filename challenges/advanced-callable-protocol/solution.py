@@ -1,14 +1,13 @@
-"""
-TODO:
-
+"""TODO:
 Define a callable type that accepts a string parameter called `name` and returns None.
+
 """
+
 from typing import Protocol
 
 
 class SingleStringInput(Protocol):
-    def __call__(self, name: str) -> None:
-        ...
+    def __call__(self, name: str) -> None: ...
 
 
 ## End of your code ##
@@ -16,12 +15,10 @@ def accept_single_string_input(func: SingleStringInput) -> None:
     func(name="name")
 
 
-def string_name(name: str) -> None:
-    ...
+def string_name(name: str) -> None: ...
 
 
-def string_value(value: str) -> None:
-    ...
+def string_value(value: str) -> None: ...
 
 
 def return_string(name: str) -> str:

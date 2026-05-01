@@ -1,6 +1,4 @@
-"""
-Make sure all solutions type check.
-"""
+"""Make sure all solutions type check."""
 
 from pathlib import Path
 

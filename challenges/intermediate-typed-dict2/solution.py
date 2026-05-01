@@ -1,15 +1,14 @@
-"""
-TODO:
-
+"""TODO:
 Define a class `Student` that represents a dictionary with three keys:
 - name, a string
 - age, an integer
 - school, a string
 
 Note: school can be optional
+
 """
 
-from typing import TypedDict, NotRequired
+from typing import NotRequired, TypedDict
 
 
 class Student(TypedDict):
@@ -31,5 +30,7 @@ a: Student = {"name": "Tom", "age": "2", "school": "Hogwarts"}  # expect-type-er
 a: Student = {"z": "Tom", "age": 2}  # expect-type-error
 assert Student(name="Tom", age=15) == dict(name="Tom", age=15)
 assert Student(name="Tom", age=15, school="Hogwarts") == dict(
-    name="Tom", age=15, school="Hogwarts"
+    name="Tom",
+    age=15,
+    school="Hogwarts",
 )

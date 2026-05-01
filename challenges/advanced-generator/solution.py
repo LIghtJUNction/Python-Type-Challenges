@@ -1,8 +1,7 @@
-"""
-TODO:
-
+"""TODO:
 `gen` is a generator that yields a integer, and can accept a string sent to it.
 It does not return anything.
+
 """
 
 from collections.abc import Generator
@@ -10,7 +9,6 @@ from collections.abc import Generator
 
 def gen() -> Generator[int, str, None]:
     """You don't need to implement it"""
-    ...
 
 
 ## End of your code ##

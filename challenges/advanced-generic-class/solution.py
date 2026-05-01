@@ -1,11 +1,11 @@
-"""
-TODO:
-
+"""TODO:
 Define a generic class that represents a stack.
 It can be instantiated with a certain type, with method `push` accepting an object of the specified type,
 and `pop` returning an an object of the same type
+
 """
-from typing import TypeVar, Generic, assert_type
+
+from typing import assert_type
 
 # Before 3.12 you have to write:
 # T = TypeVar('T')
@@ -26,7 +26,6 @@ class Stack[T]:
 
 
 ## End of your code ##
-from typing import assert_type
 
 s = Stack[int]()
 s.push(1)

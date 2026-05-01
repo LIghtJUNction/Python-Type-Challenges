@@ -1,8 +1,7 @@
-"""
-TODO:
-
+"""TODO:
 Define a class `Undergraduate` using the predefined class `Student`.
 `Undergraduate` has an extra key `major` of type string
+
 """
 
 from typing import TypedDict
@@ -14,8 +13,7 @@ class Student(TypedDict):
     school: str
 
 
-class Undergraduate:
-    ...
+class Undergraduate: ...
 
 
 ## End of your code ##

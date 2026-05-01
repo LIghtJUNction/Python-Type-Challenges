@@ -22,7 +22,7 @@ def test_run_challenge(test_client: FlaskClient, question_file: Path):
 
 
 def test_run_code_with_syntax_error(test_client: FlaskClient):
-    response = test_client.post(f"run/basic/any", data="""class A::""")
+    response = test_client.post("run/basic/any", data="""class A::""")
     assert response.json == {
         "message": "😱 SyntaxError: invalid syntax (line 1)",
         "passed": False,

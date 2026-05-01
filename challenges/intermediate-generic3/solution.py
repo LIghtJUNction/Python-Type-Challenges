@@ -1,8 +1,7 @@
-"""
-TODO:
-
+"""TODO:
 The function `add` accepts one argument and returns a value, they all have the same type.
 The type can only be int or subclasses of int.
+
 """
 # For Python < 3.12
 # from typing import TypeVar
@@ -15,8 +14,7 @@ The type can only be int or subclasses of int.
 
 
 # For Python >= 3.12
-def add[T: int](a: T) -> T:
-    ...
+def add[T: int](a: T) -> T: ...
 
 
 ## End of your code ##

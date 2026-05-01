@@ -1,14 +1,12 @@
-"""
-TODO:
-
+"""TODO:
 `gen` is a generator that yields a integer, and can accept a string sent to it.
 It does not return anything.
+
 """
 
 
 def gen():
     """You don't need to implement it"""
-    ...
 
 
 ## End of your code ##

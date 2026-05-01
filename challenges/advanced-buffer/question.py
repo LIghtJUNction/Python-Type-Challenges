@@ -1,14 +1,12 @@
-"""
-TODO:
-
+"""TODO:
 Annotate the function `read_buffer`, which accepts anything that is a buffer.
 
 See https://docs.python.org/3.12/reference/datamodel.html#object.__buffer__
+
 """
 
 
-def read_buffer(b):
-    ...
+def read_buffer(b): ...
 
 
 ## End of your code ##

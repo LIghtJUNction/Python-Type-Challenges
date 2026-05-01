@@ -3,8 +3,8 @@ import platform
 from functools import wraps
 
 from flask import (
-    abort,
     Blueprint,
+    abort,
     jsonify,
     redirect,
     render_template,
@@ -24,7 +24,7 @@ def validate_challenge(view_func):
     @wraps(view_func)
     def wrapper(level, name, *args, **kwargs):
         if Level.is_valid_level(level) and challenge_manager.has_challenge(
-            ChallengeKey(Level(level), name)
+            ChallengeKey(Level(level), name),
         ):
             return view_func(level, name, *args, **kwargs)  # valid challenge
         abort(404)
@@ -78,22 +78,23 @@ def run_challenge(level: str, name: str):
         ast.parse(code)
     except SyntaxError as e:
         return jsonify(
-            {"passed": False, "message": f"😱 SyntaxError: {e.msg} (line {e.lineno})"}
+            {"passed": False, "message": f"😱 SyntaxError: {e.msg} (line {e.lineno})"},
         )
 
     result = challenge_manager.run_challenge(
-        user_code=code, key=ChallengeKey(Level(level), name)
+        user_code=code,
+        key=ChallengeKey(Level(level), name),
     )
     if result.passed:
         message = "<h2>✅ Congratulations! You passed the test 🎉</h2>"
         return jsonify(
-            {"passed": True, "message": message, "debug_info": result.debug_info}
+            {"passed": True, "message": message, "debug_info": result.debug_info},
         )
 
     error_message = "<h2>❌ Challenge failed 😢</h2>"
     error_message += f"<p>Error:\n{result.message}</p>"
     return jsonify(
-        {"passed": False, "message": error_message, "debug_info": result.debug_info}
+        {"passed": False, "message": error_message, "debug_info": result.debug_info},
     )
 
 

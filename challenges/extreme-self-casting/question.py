@@ -1,12 +1,11 @@
-"""
-TODO:
-
+"""TODO:
 Fn is a class decorator which takes a callable (`f`).
 Fn has a `transform_callable` method, which transform `f` into a different callable,
 with an additional Any parameter at the beginning, while preserving the remaining parts
 of the function signature.
 
 Note: you're only requried to add type annotations without implementing transform_callable.
+
 """
 
 
@@ -14,12 +13,11 @@ class Fn:
     def __init__(self, f):
         self.f = f
 
-    def transform_callable(self):
-        ...
+    def transform_callable(self): ...
 
 
 ## End of your code ##
-from typing import assert_type, Any
+from typing import Any, assert_type
 
 
 @Fn

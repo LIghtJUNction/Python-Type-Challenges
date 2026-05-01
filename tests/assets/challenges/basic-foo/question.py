@@ -1,5 +1,4 @@
-"""A simple question, only for running tests.
-"""
+"""A simple question, only for running tests."""
 
 
 def foo():

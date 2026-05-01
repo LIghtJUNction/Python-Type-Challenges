@@ -1,7 +1,6 @@
-"""
-TODO:
-
+"""TODO:
 Define an `Array` type that supports element-wise addition of arrays with identical dimensions and types.
+
 """
 
 # For Python < 3.12
@@ -14,8 +13,7 @@ Define an `Array` type that supports element-wise addition of arrays with identi
 
 # For Python >= 3.12
 class Array[*Ts]:
-    def __add__(self, other: "Array[*Ts]") -> "Array[*Ts]":
-        ...
+    def __add__(self, other: "Array[*Ts]") -> "Array[*Ts]": ...
 
 
 ## End of your code ##

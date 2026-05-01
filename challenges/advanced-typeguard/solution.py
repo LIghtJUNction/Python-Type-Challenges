@@ -1,9 +1,9 @@
-"""
-TODO:
-
+"""TODO:
 `is_string` determines whether the input value is a string.
 Your job is to make the type checker be aware of this information.
+
 """
+
 from typing import Any, TypeGuard
 
 

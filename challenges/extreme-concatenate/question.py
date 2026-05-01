@@ -1,11 +1,10 @@
-"""
-TODO:
-
+"""TODO:
 Suppose there's a function `foo`, whose first parameter can be anything.
 
 You want to use `foo`, but want to restrict the first argument to be a `Person`.
 You cannot modify `foo`, so you decide to write a function `transform`,
 to transform `foo` into the function you want.
+
 """
 
 

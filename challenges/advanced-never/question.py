@@ -1,7 +1,6 @@
-"""
-TODO:
-
+"""TODO:
 Make sure `never_call_me` is never called.
+
 """
 
 

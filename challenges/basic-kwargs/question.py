@@ -1,12 +1,10 @@
-"""
-TODO:
-
+"""TODO:
 `foo` takes keyword arguments of type integer or string.
+
 """
 
 
-def foo(**kwargs):
-    ...
+def foo(**kwargs): ...
 
 
 ## End of your code ##

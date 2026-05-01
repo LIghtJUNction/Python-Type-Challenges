@@ -1,10 +1,6 @@
-"""
-Make sure all questions fail type check.
-"""
+"""Make sure all questions fail type check."""
 
 from pathlib import Path
-
-import pytest
 
 from views.challenge import ChallengeManager
 

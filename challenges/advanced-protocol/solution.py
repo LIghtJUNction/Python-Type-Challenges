@@ -1,14 +1,13 @@
-"""
-TODO:
-    Define a protocol for class `SupportsQuack` that supports a "quack" method.
+"""TODO:
+Define a protocol for class `SupportsQuack` that supports a "quack" method.
+
 """
 
 from typing import Protocol
 
 
 class SupportsQuack(Protocol):
-    def quack(self) -> None:
-        ...
+    def quack(self) -> None: ...
 
 
 ## End of your code ##

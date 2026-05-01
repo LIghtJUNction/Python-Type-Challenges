@@ -1,15 +1,13 @@
-"""
-TODO:
-
+"""TODO:
 `process` is a function that takes one argument `response`
 - When `response` is bytes, `process` returns a string
 - When `response` is an integer, `process` returns tuple[int, str]
 - When `response` is None, `process` returns None
+
 """
 
 
-def process(response: int | bytes | None) -> str | None | tuple[int, str]:
-    ...
+def process(response: int | bytes | None) -> str | None | tuple[int, str]: ...
 
 
 ## End of your code ##

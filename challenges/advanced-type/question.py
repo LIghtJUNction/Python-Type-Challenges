@@ -1,12 +1,10 @@
-"""
-TODO:
-
+"""TODO:
 `make_object` takes a class returns an instance of it.
+
 """
 
 
-def make_object(cls):
-    ...
+def make_object(cls): ...
 
 
 ## End of your code ##

@@ -1,6 +1,4 @@
-"""
-TODO: Annotate function `f` and `g`, to make tests pass.
-"""
+"""TODO: Annotate function `f` and `g`, to make tests pass."""
 
 from collections.abc import Sequence
 

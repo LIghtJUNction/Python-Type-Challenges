@@ -1,7 +1,6 @@
-"""
-TODO:
-
+"""TODO:
 foo should return an integer argument.
+
 """
 
 

@@ -1,8 +1,6 @@
-"""
-In `conftest.py` we define fixtures that are used in multiple tests. pytest will automatically
+"""In `conftest.py` we define fixtures that are used in multiple tests. pytest will automatically
 inject them into the test functions that need them by signature matching.
 """
-
 
 from pathlib import Path
 
@@ -17,13 +15,13 @@ ALL_SOLUTIONS = list(CHALLENGES_DIR.glob("**/solution*.py"))
 ALL_HINTS = list(CHALLENGES_DIR.glob("**/hints.md"))
 
 
-@pytest.fixture()
+@pytest.fixture
 def assets_dir() -> Path:
     """The directory contains test assets."""
     return Path(__file__).parent / "assets"
 
 
-@pytest.fixture()
+@pytest.fixture
 def test_client() -> FlaskClient:
     return app.test_client()
 

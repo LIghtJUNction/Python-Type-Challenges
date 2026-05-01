@@ -1,12 +1,10 @@
-"""
-TODO:
-
+"""TODO:
 foo is a function that returns an integer when second argument is 1, returns a string when second argument is 2, returns a list when second argument is 3, otherwise it returns the first argument.
+
 """
 
 
-def foo(value, flag):
-    ...
+def foo(value, flag): ...
 
 
 ## End of your code ##

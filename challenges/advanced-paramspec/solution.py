@@ -1,10 +1,10 @@
-"""
-TODO:
-
+"""TODO:
 Add type annotations to the class `Wrap`, so that it can be called with the
 same arguments as the function it wraps.
+
 """
-from typing import Callable
+
+from collections.abc import Callable
 
 # Before 3.12 you have to write:
 # T = TypeVar('T')
